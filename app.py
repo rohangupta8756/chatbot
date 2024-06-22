@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify, render_template
 app = Flask(__name__)
 
 # Replace 'YOUR_API_KEY' with your actual OpenAI API key
-openai.api_key = 'YOUR_API_KEY'
+openai.api_key = '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'
 
 def generate_response(prompt):
     response = openai.Completion.create(
