@@ -1,10 +1,11 @@
 import openai
 from flask import Flask, request, jsonify, render_template
+import config
 
 app = Flask(__name__)
 
 # Replace 'YOUR_API_KEY' with your actual OpenAI API key
-openai.api_key = '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'
+openai.api_key = config.OPENAI_API_KEY
 
 def generate_response(prompt):
     response = openai.Completion.create(
